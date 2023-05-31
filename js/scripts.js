@@ -16,7 +16,7 @@ $(window).load(function(){
 			spinner:$('<span class="bg-spinner"></span>')
 		})
 		
-	$('#streamers .imgs a img').parent()
+	$('#comp .imgs a img').parent()
 		.fancybox()
 		
 	content
