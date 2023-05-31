@@ -17,6 +17,23 @@
 
 		<script src="js/jquery.min.js" type="text/javascript"></script>
 		<script src="js/scripts.js" type="text/javascript"></script>
+		<script defer src="/_vercel/insights/script.js"></script>
+		<script defer src="https://cdn.vercel-insights.com/v1/script.debug.js"></script>
+
+		<script>
+			window.va = function () {
+			  (window.vaq = window.vaq || []).push(arguments);
+			};
+		</script>
+
+		<script>
+			window.va('beforeSend', (event) => {
+			if (event.url.includes('secret')) {
+				return null;
+			}
+			return event;
+			});
+		</script>
 
 	</head>
 
